@@ -41,6 +41,8 @@ jobs:
       run: pnpm test
   e2e:
     runs-on: ubuntu-latest
+    env:
+      NORAY_UDP_RELAY_PORTS: 49152
     needs: test
     steps:
     - uses: actions/checkout@v3

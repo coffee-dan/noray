@@ -15,16 +15,22 @@ min_machines_running = 0
 processes = [ "app" ]
 
 [[services]]
-    internal_port = 8890
-    protocol = "tcp"
-    [[services.ports]]
-        port = 8890
+  internal_port = 8890
+  protocol = "tcp"
+  [[services.ports]]
+    port = 8890
 
 [[services]]
-    internal_port = 49152
-    protocol = "udp"
-    [[services.ports]]
-        port = 49152
+  internal_port = 8809
+  protocol = "udp"
+  [[services.ports]]
+    port = 8809
+
+[[services]]
+  internal_port = 49152
+  protocol = "udp"
+  [[services.ports]]
+    port = 49152
 
 [[vm]]
 size = "shared-cpu-1x"
