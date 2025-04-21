@@ -6,13 +6,16 @@ app = "noray"
 build = { }
 primary_region = "dfw"
 
+[processes]
+  app = "pnpm start:prod"
+
 [http_service]
-auto_start_machines = true
-auto_stop_machines = "stop"
-force_https = true
-internal_port = 8891
-min_machines_running = 0
-processes = [ "app" ]
+  processes = [ "app" ]
+  internal_port = 8891
+  force_https = true
+  auto_start_machines = true
+  auto_stop_machines = "stop"
+  min_machines_running = 0
 
 [[services]]
   internal_port = 8890
