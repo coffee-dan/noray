@@ -18,18 +18,21 @@ primary_region = "dfw"
   min_machines_running = 0
 
 [[services]]
+  processes = [ "app" ]
   internal_port = 8890
   protocol = "tcp"
   [[services.ports]]
     port = 8890
 
 [[services]]
+  processes = [ "app" ]
   internal_port = 8809
   protocol = "udp"
   [[services.ports]]
     port = 8809
 
 [[services]]
+  processes = [ "app" ]
   internal_port = 49152
   protocol = "udp"
   [[services.ports]]
